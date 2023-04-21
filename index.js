@@ -93,7 +93,7 @@ app.post("/register", (req, res) => {
     console.info("register for ", name);
     User.findOne({ name: name }).then(async (entry) => {
       if (entry) {
-        res.status(500).send({ message: "User already registered" });
+        res.status(250).send({ message: "User already registered" });
       } else {
         const user2 = new User({
           name: name,
